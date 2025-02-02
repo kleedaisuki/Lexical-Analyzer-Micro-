@@ -1,31 +1,45 @@
 #include "tla.hpp"
 
-static KeywordQueue keyword_queue = {
-    "const",
+static const char *keyword_queue[] = {
     "void",
-    "return",
+    "signed",
+    "unsigned",
+    "char",
+    "short",
     "int",
-    "static",
-    "bool",
+    "long",
+    "float",
+    "double",
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "break",
+    "continue",
+    "switch",
+    "case",
+    "return",
+    "template",
+    "typename",
+    "struct",
+    "class",
+    "union",
+    "const",
+    "voliate",
+    "asm",
+    "constexpr",
+    "operator",
+    "auto",
+    "const_cast",
+    "static_cast",
+    "dynamic_cast",
+    "reinterpret_cast",
     "and",
     "or",
     "not",
-    "char",
-    "double",
-    "long",
-    "float",
-    "if",
-    "using",
-    "static_cast",
-    "while",
-    "ture",
-    "inline",
-    "case",
     "new",
     "delete",
-    "template",
-    "class",
-    "typename",
 }; // Unfinshed.
 
 void print(Token &token) // Output to stdout.
@@ -110,14 +124,13 @@ static bool is_number(char ch)
 
 static bool is_blank(char ch)
 {
-    return ch == ' ' or ch == '\n' or ch == '\t' or ch == '\b' or ch == '\f';
+    return ch == ' ' or ch == '\n' or ch == '\t';
 }
 
 static bool is_keyword(char *str)
 {
-    auto iter = keyword_queue.begin();
-    for (int i = 0; i < keyword_queue.length(); i++, ++iter)
-        if (*iter == str)
+    for (int i = 0; i < 39; i++)
+        if (!strcmp(str, keyword_queue[i]))
             return true;
     return false;
 }

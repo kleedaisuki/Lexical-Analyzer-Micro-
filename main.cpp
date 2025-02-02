@@ -17,6 +17,5 @@ int main(int argc, char *argv[])
     /* Clear. */
     for (int i = 0; i < results.length(); i++, iter++)
         free(static_cast<void *>((*iter).str));
-    fclose(file);
-    fclose(out);
+    fcloseall();
 }

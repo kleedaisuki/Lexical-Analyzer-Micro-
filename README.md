@@ -2,11 +2,9 @@
 
 This is tiny lexical analyzer developed for personal joy~ Because it's for killing time, so I barely optimized my code.
 
-There is only one function, `read_from_file` that . It reads files, and then seperates lines and paragraphs into tokens
+The function, `read_from_file`, reads files, and then seperates lines and paragraphs into C/C++ tokens.
 
 ## Space left to optimize
-
-+ The class, `String`, declared in `tokens.hpp` and realized in `class.String.cpp`, actually wasted plenty of resource, as it requests 32B directly instead of using `union` to have short strings in stack.
 
 + The class, `List`, committed the same problem as well. *They are actually part of my own tiny frame, so they may not fit these codes.*
 

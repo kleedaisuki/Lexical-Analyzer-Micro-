@@ -36,11 +36,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -72,11 +68,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -107,11 +99,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -141,11 +129,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -176,11 +160,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -211,11 +191,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -246,11 +222,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -281,11 +253,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -301,6 +269,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[2] = '\0';
                 aim->type = INSTRUCTION;
                 *results << std::move(*aim);
+                break;
             case '=':
                 aim->str = static_cast<char *>(malloc(3));
                 aim->str[0] = cur;
@@ -322,11 +291,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -356,11 +321,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
@@ -391,11 +352,7 @@ char analysis_operators(char *operators, Token *aim, Results *results, int count
                 aim->str[1] = '\0';
                 aim->type = OPERATOR;
                 *results << std::move(*aim);
-                aim->str = static_cast<char *>(malloc(3));
-                aim->str[0] = *operators;
-                aim->str[1] = '\0';
-                aim->type = OPERATOR;
-                *results << std::move(*aim);
+                operators--, i--;
                 break;
             }
             break;
